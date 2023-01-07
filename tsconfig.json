@@ -10,9 +10,7 @@
     "rootDir": ".",
     "baseUrl": ".",
     "paths": {
-      "@my-org/std": ["libs/std/index.ts"],
-      "@my-org/std-node": ["libs/std-node/index.ts"],
-      "@my-org/ui": ["libs/ui/index.ts"]
+      "@/*": ["src/*"]
     },
     "strict": true,
     "noUnusedLocals": true,
@@ -33,5 +31,6 @@
     "noErrorTruncation": false,
     "pretty": true
   },
+  "include": ["**/*.ts"],
   "exclude": ["node_modules", "tmp", "dist"]
 }

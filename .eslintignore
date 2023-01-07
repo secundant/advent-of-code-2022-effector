@@ -6,3 +6,4 @@ esnext/**/*
 **/.next/**/*
 .eslintcache
 .pnp.сjs
+!src/**/*

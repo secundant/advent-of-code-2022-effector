@@ -9,7 +9,7 @@
 
 > Project is in early development phase and contains some dirty moments
 
-[Visit our documentation](https://product-template.pages.dev/docs/product-template/intro) to get detailed information and
+[Visit our documentation](https://aoc.pages.dev/docs/aoc/intro) to get detailed information and
 see like-a-real-world example of [apps/docs](./apps/docs) in one 👏
 
 Our primary features:
@@ -33,7 +33,7 @@ Our primary features:
 
 ### Preconfigured TypeScript
 
-[Global tsconfig.base.json](./tsconfig.base.json) is well designed
+[Global tsconfig.base.json](./tsconfig.json) is well designed
 configuration preset with strict rules and monorepo packages paths.
 It should be used in all modules in workspace for consistency purpose.
 Of course, you can reconfigure it as you wish :)
@@ -57,7 +57,7 @@ so you don't need to add them in every package.
 
 So, if you want to add unit tests:
 
-1. `yarn add -D vitest` in target library folder or `yarn workspace @my-org/NAME add -D vitest` anywhere else
+1. `yarn add -D vitest` in target library folder or `yarn workspace @aoc/NAME add -D vitest` anywhere else
 2. Add `vite.config.ts` - you can take configuration in [local "std" library](libs/std/vite.config.ts)
    or make it yourself as it shown [in vitest documentation](https://vitest.dev/config/)
 3. Add `"test": "vitest run"` to your library `package.json`
