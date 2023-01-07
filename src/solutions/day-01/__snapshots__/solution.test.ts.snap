@@ -1,0 +1,5 @@
+// Vitest Snapshot v1
+
+exports[`Day 1 > 01 - how many Calories are being carried by the Elf carrying the most Calories 1`] = `72602`;
+
+exports[`Day 1 > 02 - total Calories carried by the top three Elves carrying the most Calories 1`] = `207410`;
