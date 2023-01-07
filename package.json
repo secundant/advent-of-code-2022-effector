@@ -18,11 +18,6 @@
     "npm": "please-use-yarn"
   },
   "packageManager": "yarn@3.3.0",
-  "workspaces": [
-    "apps/*",
-    "libs/*",
-    "tools/*"
-  ],
   "scripts": {
     "test": "vitest run",
     "lint": "eslint src",
@@ -32,6 +27,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.4.0",
     "@commitlint/config-conventional": "17.4.0",
+    "@types/node": "18.11.18",
     "eslint": "8.31.0",
     "eslint-kit": "6.10.0",
     "husky": "8.0.3",

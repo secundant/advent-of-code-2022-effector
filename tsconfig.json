@@ -3,6 +3,7 @@
   "compilerOptions": {
     "jsx": "preserve",
     "lib": ["ESNext"],
+    "types": ["node"],
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
