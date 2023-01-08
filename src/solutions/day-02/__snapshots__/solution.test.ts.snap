@@ -1,3 +1,5 @@
 // Vitest Snapshot v1
 
 exports[`Day 2 > 01 - total score be if everything goes exactly according to your strategy guide 1`] = `13675`;
+
+exports[`Day 2 > 02 - what would your total score be if everything goes exactly according to your strategy guide? 1`] = `14184`;
