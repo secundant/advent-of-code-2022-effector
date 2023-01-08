@@ -1,13 +1,12 @@
 import { allSettled, fork } from 'effector';
-import { readFile } from 'node:fs/promises';
 import { describe, expect, test } from 'vitest';
-import { metaResolve } from '@/shared/path';
+import { readRelativeFile } from '@/shared/fs';
 import { $maxCalories, $sumOfTopCalories, replaceCalories } from '@/solutions/day-01/solution';
 
 describe('Day 1', async () => {
   const createAndFillScope = async () => {
     const scope = fork();
-    const data = await readFile(metaResolve(import.meta, 'data.txt'), 'utf-8');
+    const data = await readRelativeFile(import.meta, './data.txt');
 
     await allSettled(replaceCalories, {
       scope,

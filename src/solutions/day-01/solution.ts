@@ -6,7 +6,7 @@ const countOfElvesCarryingTheMostCalories = 3;
 
 export const replaceCalories = createEvent<number[][]>();
 
-const $rawCaloriesGroups = createStore<number[][]>([]);
+export const $rawCaloriesGroups = createStore<number[][]>([]);
 
 const $calories = $rawCaloriesGroups.map(groups => groups.map(sum));
 const $sortedCalories = $calories.map(calories => sort(calories, numericComparator));
