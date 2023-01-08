@@ -14,3 +14,11 @@ export const divideString = (input: string, length: number) =>
 export const isUpperCase = (char: string) => char === char.toUpperCase();
 
 export const getCharCode = (char: string) => char.charCodeAt(0);
+
+export function chunk(input: string, size: number): string[];
+export function chunk<T>(input: T[], size: number): T[][];
+export function chunk<T>(input: string | T[], size: number) {
+  return Array.from({ length: Math.ceil(input.length / size) }, (_, index) =>
+    input.slice(index * size, (index + 1) * size)
+  );
+}

@@ -1,3 +1,5 @@
 // Vitest Snapshot v1
 
 exports[`Day 3 > 01 - sum of the priorities of items that appears in both compartments of each rucksack 1`] = `7917`;
+
+exports[`Day 3 > 02 - sum of the priorities of items that corresponds to the badges 1`] = `2585`;

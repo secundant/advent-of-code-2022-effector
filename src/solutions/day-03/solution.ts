@@ -1,6 +1,6 @@
 import { createStore } from 'effector';
 import { sum } from '@/shared/math';
-import { divideString, getCharCode, isUpperCase, uniq } from '@/shared/std';
+import { chunk, getCharCode, isUpperCase, uniq } from '@/shared/std';
 
 export const compartmentsCount = 2;
 
@@ -13,7 +13,7 @@ export const $encryptedRucksacks = createStore<string[]>([], { sid: '$encryptedR
 
 export const $rucksacks = $encryptedRucksacks.map(encrypted =>
   encrypted.map(entry =>
-    divideString(entry, entry.length / compartmentsCount).map(part => Array.from(part))
+    chunk(entry, entry.length / compartmentsCount).map(part => Array.from(part))
   )
 );
 
