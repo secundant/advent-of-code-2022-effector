@@ -1,3 +1,5 @@
 // Vitest Snapshot v1
 
 exports[`Day 04 > 01 - In how many assignment pairs does one range fully contain the other? 1`] = `459`;
+
+exports[`Day 04 > 02 - In how many assignment pairs do the ranges overlap? 1`] = `779`;

@@ -1,7 +1,11 @@
 import { fork } from 'effector';
 import { describe, expect, test } from 'vitest';
 import { createTestContext } from '@/shared/testing-utils';
-import { $fullyOverlappedPairs, $serializedPairs } from '@/solutions/day-04/solution';
+import {
+  $anyOverlappedPairs,
+  $fullyOverlappedPairs,
+  $serializedPairs
+} from '@/solutions/day-04/solution';
 
 const exampleData = `
 2-4,6-8
@@ -34,6 +38,16 @@ describe('Day 04', async () => {
   test('01 - In how many assignment pairs does one range fully contain the other?', async () => {
     expect(
       createScope(await ctx.loadFile()).getState($fullyOverlappedPairs).length
+    ).toMatchSnapshot();
+  });
+
+  test('02 - should pass example', () => {
+    expect(createScope(exampleData).getState($anyOverlappedPairs)).toHaveLength(4);
+  });
+
+  test('02 - In how many assignment pairs do the ranges overlap?', async () => {
+    expect(
+      createScope(await ctx.loadFile()).getState($anyOverlappedPairs).length
     ).toMatchSnapshot();
   });
 });

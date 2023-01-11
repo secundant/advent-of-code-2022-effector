@@ -7,14 +7,23 @@ type Range = [number, number];
 const parseRange = (input: string) => input.split('-').map(toInt) as [number, number];
 const parsePair = (pair: SerializedPair) => pair.map(parseRange) as [Range, Range];
 
-const isRangeContains = (range: Range, subRange: Range) =>
-  range[0] <= subRange[0] && range[1] >= subRange[1];
+const inRange = (value: number, [from, to]: Range) => value >= from && value <= to;
+const isSubRange = (range: Range, subRange: Range) =>
+  subRange.every(value => inRange(value, range));
 
-const isFullyOverlappedPair = ([left, right]: [Range, Range]) =>
-  isRangeContains(left, right) || isRangeContains(right, left);
+const isOverlappingRange = (range: Range, subRange: Range) =>
+  subRange.some(value => inRange(value, range));
+
+const isFullyOverlappingPair = ([left, right]: [Range, Range]) =>
+  isSubRange(left, right) || isSubRange(right, left);
+
+const isPartiallyOverlappedPair = ([left, right]: [Range, Range]) =>
+  isOverlappingRange(left, right) || isOverlappingRange(right, left);
 
 export const $serializedPairs = createStore<SerializedPair[]>([], { sid: '$serializedPairs' });
 
 export const $pairs = $serializedPairs.map(pairs => pairs.map(parsePair));
 
-export const $fullyOverlappedPairs = $pairs.map(pairs => pairs.filter(isFullyOverlappedPair));
+export const $fullyOverlappedPairs = $pairs.map(pairs => pairs.filter(isFullyOverlappingPair));
+
+export const $anyOverlappedPairs = $pairs.map(pairs => pairs.filter(isPartiallyOverlappedPair));
