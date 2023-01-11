@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "jsx": "preserve",
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM"],
     "types": ["node"],
     "target": "esnext",
     "module": "esnext",
