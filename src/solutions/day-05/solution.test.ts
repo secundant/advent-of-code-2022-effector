@@ -3,7 +3,13 @@ import { describe, expect, test } from 'vitest';
 import { max } from '@/shared/math';
 import { fromLength, length } from '@/shared/std';
 import { getDayData } from '@/shared/testing-utils';
-import { $commands, $reorderedMask, $reorderedStacks, $stacks } from '@/solutions/day-05/solution';
+import {
+  $commands,
+  $reorderedMask,
+  $reorderedStacks,
+  $reorderedWithNewCrateMask,
+  $stacks
+} from '@/solutions/day-05/solution';
 
 const exampleData = `    [D]
 [N] [C]
@@ -63,5 +69,17 @@ describe('Day 04', async () => {
 
     expect(scope.getState($reorderedStacks)).toMatchSnapshot();
     expect(scope.getState($reorderedMask)).toMatchSnapshot();
+  });
+
+  test('02 - should pass example', () => {
+    const scope = createScope(exampleData);
+
+    expect(scope.getState($reorderedWithNewCrateMask)).toEqual('MCD');
+  });
+
+  test('02 - After the rearrangement procedure completes, what crate ends up on top of each stack?', async () => {
+    const scope = createScope(await getDayData(5));
+
+    expect(scope.getState($reorderedWithNewCrateMask)).toMatchSnapshot();
   });
 });

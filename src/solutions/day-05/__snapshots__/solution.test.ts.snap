@@ -80,3 +80,5 @@ exports[`Day 04 > 01 - After the rearrangement procedure completes, what crate e
 `;
 
 exports[`Day 04 > 01 - After the rearrangement procedure completes, what crate ends up on top of each stack? 2`] = `"HNSNMTLHQ"`;
+
+exports[`Day 04 > 02 - After the rearrangement procedure completes, what crate ends up on top of each stack? 1`] = `"RNLFDJMCT"`;
