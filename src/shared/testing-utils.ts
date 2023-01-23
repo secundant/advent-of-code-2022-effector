@@ -7,3 +7,7 @@ export const createTestContext = (meta: ImportMeta) => {
     loadFile
   };
 };
+
+export const getData = (name: string) =>
+  readFile(new URL(`../data/${name}`, import.meta.url).pathname, 'utf-8');
+export const getDayData = (day: number | string) => getData(`day-${day}.txt`);

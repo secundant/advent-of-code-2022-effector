@@ -23,3 +23,8 @@ export function chunk<T>(input: string | T[], size: number) {
     input.slice(index * size, (index + 1) * size)
   );
 }
+
+export const length = (value: unknown[] | string) => value.length;
+
+export const fromLength = <T>(length: number, fn: (index: number) => T) =>
+  Array.from({ length }, (_, index) => fn(index));

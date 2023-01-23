@@ -1,0 +1,82 @@
+// Vitest Snapshot v1
+
+exports[`Day 04 > 01 - After the rearrangement procedure completes, what crate ends up on top of each stack? 1`] = `
+[
+  [
+    "[C]",
+    "[M]",
+    "[N]",
+    "[H]",
+  ],
+  [
+    "[J]",
+    "[N]",
+  ],
+  [
+    "[S]",
+  ],
+  [
+    "[L]",
+    "[L]",
+    "[V]",
+    "[N]",
+  ],
+  [
+    "[C]",
+    "[L]",
+    "[D]",
+    "[M]",
+  ],
+  [
+    "[M]",
+    "[R]",
+    "[B]",
+    "[V]",
+    "[F]",
+    "[Q]",
+    "[W]",
+    "[T]",
+    "[Q]",
+    "[J]",
+    "[P]",
+    "[L]",
+    "[W]",
+    "[H]",
+    "[B]",
+    "[R]",
+    "[T]",
+    "[G]",
+    "[M]",
+    "[H]",
+    "[D]",
+    "[T]",
+  ],
+  [
+    "[D]",
+    "[G]",
+    "[Q]",
+    "[F]",
+    "[R]",
+    "[Z]",
+    "[G]",
+    "[D]",
+    "[P]",
+    "[G]",
+    "[H]",
+    "[P]",
+    "[L]",
+    "[L]",
+  ],
+  [
+    "[M]",
+    "[C]",
+    "[H]",
+  ],
+  [
+    "[R]",
+    "[Q]",
+  ],
+]
+`;
+
+exports[`Day 04 > 01 - After the rearrangement procedure completes, what crate ends up on top of each stack? 2`] = `"HNSNMTLHQ"`;
